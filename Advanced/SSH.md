@@ -1,5 +1,5 @@
 
-### *Secure Shell (SSH) for Local-to-Server & Server-to-Server Communication*
+### *Secure Shell (SSH) *
 
 ---
 
