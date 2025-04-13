@@ -310,3 +310,9 @@ nginx        latest    abc123def456   2 weeks ago    133MB
 ubuntu       20.04     def456abc123   3 weeks ago    72.9MB
 ```
 
+
+## **🎥 Recommended YouTube Resource**  
+For a **detailed Linux tutorial**, watch:  
+👉 **[Linux for Beginners (Full Course)](https://www.youtube.com/watch?v=e01GGTKmtpc&t=6876s)**  
+
+
