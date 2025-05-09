@@ -89,11 +89,72 @@ sudo systemctl status cron
 ```
 
 ---
+Here’s how you can **check if your backup has been updated** and **view it using `ls`** after running the backup script:
 
-### 📁 Where Backups Will Be Stored
+---
+
+### ✅ Checking if Your Backup is Updated
+
+After running the backup script, follow these steps to confirm your backup is updated:
+
+1. **Navigate to the backup directory** where your backups are stored:
+
+   ```bash
+   cd /home/ubuntu/backup
+   ```
+
+2. **List the files in the directory** to check for the most recent backup:
+
+   ```bash
+   ls -lh
+   ```
+
+   This will show a list of files, including the **timestamped backups**. For example:
+
+   ```
+   -rw-r--r-- 1 ubuntu ubuntu 1.2G May 9 02:00 backups-2025-05-09_02-00-00.zip
+   -rw-r--r-- 1 ubuntu ubuntu 1.3G May 8 02:00 backups-2025-05-08_02-00-00.zip
+   ```
+
+3. **Check for the most recent backup file**. The file with the latest **timestamp** is the most recent backup.
+
+---
+
+### ✅ Reference for Cron Scheduling
+
+To ensure your cron jobs are set up correctly, you can use [**Crontab Guru**](https://crontab.guru/) — a **Cron expression editor** that helps you visualize and understand the timing of cron jobs.
+
+For example, to schedule your backup script every day at 2 AM:
+
+```bash
+0 2 * * * /home/ubuntu/script/backup.sh /home/ubuntu/scripts /home/ubuntu/backup
+```
+
+You can enter this cron expression into [**Crontab Guru**](https://crontab.guru/) to confirm its accuracy.
+
+---
+
+### 📝 Summary of Commands
+
+1. **Check backups**:
+
+   ```bash
+   cd /home/ubuntu/backup
+   ls -lh
+   ```
+
+2. **Check your cron schedule** using [Crontab Guru](https://crontab.guru/).
+
+---
+
+Would you like more details on any of these steps?
+
 
 Backups will be stored in the destination folder you provide, e.g.:
 
 ```
 /home/ubuntu/backup/backups-YYYY-MM-DD.zip
 ```
+---
+![image](https://github.com/user-attachments/assets/9d9060f3-a9be-48f4-862f-52c119c9657b)
+
